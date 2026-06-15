@@ -55,9 +55,10 @@ public class HomePage {
     }
 
     public String getTaskPriority(int taskId) {
-        WebElement priority = driver.findElement(By.xpath("//android.view.View[@resource-id=\"task_priority_" + taskId + "\"]"));
-        wait.until(ExpectedConditions.visibilityOf(priority));
-        return priority.getText();
+        WebElement badge = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.view.View[@resource-id=\"task_priority_" + taskId + "\"]")));
+        WebElement text = badge.findElement(By.className("android.widget.TextView"));
+
+        return text.getText();
     }
 
     public boolean isEmptyStateVisible() {
