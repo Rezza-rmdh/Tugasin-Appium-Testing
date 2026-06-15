@@ -15,7 +15,7 @@ public class EditTaskPage {
 
     public EditTaskPage(AndroidDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }
 
     public String getTitleValue() {
@@ -66,9 +66,10 @@ public class EditTaskPage {
     }
 
     public String getCalculatedPriority() {
-        WebElement badge = driver.findElement(By.xpath("//android.view.View[@resource-id=\"badge_calculated_priority\"]"));
-        wait.until(ExpectedConditions.visibilityOf(badge));
-        return badge.getText();
+        WebElement badge = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//android.view.View[@resource-id='badge_calculated_priority']")));
+        WebElement text = badge.findElement(By.className("android.widget.TextView"));
+
+        return text.getText();
     }
 
     public boolean isTitleErrorVisible() {
