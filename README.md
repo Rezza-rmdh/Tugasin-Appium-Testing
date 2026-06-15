@@ -119,14 +119,14 @@ TugasinApp-Automation/
 
 ## Test Cases
 
-### AddTaskTest — 5 Test Case
+### AddTaskTest — 3 Test Case
 | No | Nama Test | Jenis | Deskripsi |
 |---|---|---|---|
 | 1 | `testAddTaskSuccess` | Positive | Tambah task lengkap dengan judul, deskripsi, kategori, dan deadline |
 | 2 | `testAddTaskWithoutTitle` | Negative | Simpan task tanpa judul → error judul muncul |
 | 3 | `testPriorityAutoCalculated` | Functional | Pilih kategori UAS + deadline besok → priority otomatis HIGH |
 
-### EditTaskTest — 4 Test Case
+### EditTaskTest — 3 Test Case
 | No | Nama Test | Jenis | Deskripsi |
 |---|---|---|---|
 | 1 | `testEditTaskSuccess` | Positive | Edit judul, kategori, dan deadline → perubahan tersimpan |
