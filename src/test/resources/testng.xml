@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TugasinApp Test Suite" verbose="1">
+
+    <test name="Add Task Tests">
+        <classes>
+            <class name="tests.AddTaskTest"/>
+        </classes>
+    </test>
+
+    <test name="Edit Task Tests">
+        <classes>
+            <class name="tests.EditTaskTest"/>
+        </classes>
+    </test>
+
+    <test name="Delete Task Tests">
+        <classes>
+            <class name="tests.DeleteTaskTest"/>
+        </classes>
+    </test>
+
+    <test name="Filter Task Tests">
+        <classes>
+            <class name="tests.FilterTaskTest"/>
+        </classes>
+    </test>
+
+    <test name="Task Status Tests">
+        <classes>
+            <class name="tests.TaskStatusTest"/>
+        </classes>
+    </test>
+
+</suite>
